@@ -1,0 +1,20 @@
+task_type: bounded_regression
+competition: mws-ai-agents-2026
+target_column: target
+prediction_bounds:
+  min: 0
+  max: 365
+agent_loop:
+  max_iterations: 3
+  provider: mock
+models:
+  baseline:
+    family: lightgbm
+    objective: regression
+    params:
+      n_estimators: 200
+      learning_rate: 0.05
+      num_leaves: 31
+      subsample: 0.9
+      colsample_bytree: 0.9
+

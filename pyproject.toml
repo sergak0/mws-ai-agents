@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kaggle-multi-agent"
+version = "0.1.0"
+description = "Professional multi-agent Kaggle system with RAG, benchmarking, and feedback loops"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.16.0",
+  "pydantic>=2.11.0",
+  "pydantic-settings>=2.8.0",
+  "pyyaml>=6.0.2",
+  "pandas>=2.2.3",
+  "numpy>=2.2.4",
+  "scikit-learn>=1.6.1",
+  "lightgbm>=4.6.0",
+  "requests>=2.32.3",
+  "langgraph>=1.0.3",
+  "langchain-core>=0.3.55",
+  "openai>=1.72.0",
+]
+
+[project.optional-dependencies]
+rag = [
+  "sentence-transformers>=3.4.1",
+]
+dev = [
+  "pytest>=8.3.5",
+  "pytest-cov>=6.1.1",
+  "ruff>=0.11.4",
+]
+tracking = [
+  "wandb>=0.20.1",
+]
+
+[project.scripts]
+kaggle-multi-agent = "kaggle_multi_agent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kaggle_multi_agent"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" fill="none">
+  <rect width="1440" height="920" fill="#F5F7FB"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#3A4354"/>
+    </marker>
+    <style>
+      .title { font: 700 40px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #111827; }
+      .subtitle { font: 500 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #4B5563; }
+      .box-title { font: 700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #111827; }
+      .box-text { font: 500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #4B5563; }
+      .label { font: 700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .small { font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <text x="72" y="82" class="title">Kaggle Multi-Agent Architecture</text>
+  <text x="72" y="118" class="subtitle">Tool-driven orchestration with validated tool calls, deterministic execution, and iterative feedback.</text>
+
+  <rect x="72" y="170" width="250" height="110" rx="24" fill="#E0F2FE"/>
+  <text x="100" y="214" class="box-title">Kaggle Bundle</text>
+  <text x="100" y="244" class="box-text">train.csv, test.csv</text>
+  <text x="100" y="266" class="box-text">sample_submition.csv, solution.csv</text>
+
+  <rect x="392" y="170" width="250" height="110" rx="24" fill="#DCFCE7"/>
+  <text x="420" y="214" class="box-title">Local Storage</text>
+  <text x="420" y="244" class="box-text">validated files</text>
+  <text x="420" y="266" class="box-text">dataset profile + cached artifacts</text>
+
+  <rect x="712" y="170" width="250" height="110" rx="24" fill="#FCE7F3"/>
+  <text x="740" y="214" class="box-title">Knowledge Base</text>
+  <text x="740" y="244" class="box-text">curated notes</text>
+  <text x="740" y="266" class="box-text">TF-IDF local index</text>
+
+  <rect x="1032" y="170" width="320" height="110" rx="24" fill="#FEF3C7"/>
+  <text x="1060" y="214" class="box-title">ResearchAgent</text>
+  <text x="1060" y="244" class="box-text">retrieves context and sanitizes</text>
+  <text x="1060" y="266" class="box-text">untrusted text before use</text>
+
+  <rect x="1032" y="340" width="320" height="110" rx="24" fill="#FDE68A"/>
+  <text x="1060" y="384" class="box-title">ResearchBrief</text>
+  <text x="1060" y="414" class="box-text">retrieved_chunks, feature_ideas,</text>
+  <text x="1060" y="436" class="box-text">model_ideas, guardrail_events</text>
+
+  <rect x="1032" y="510" width="320" height="110" rx="24" fill="#DDD6FE"/>
+  <text x="1060" y="554" class="box-title">ModelerAgent</text>
+  <text x="1060" y="584" class="box-text">chooses the next structured</text>
+  <text x="1060" y="606" class="box-text">tool sequence</text>
+
+  <rect x="1032" y="680" width="320" height="110" rx="24" fill="#C7D2FE"/>
+  <text x="1060" y="724" class="box-title">ToolPlan</text>
+  <text x="1060" y="754" class="box-text">select_feature_pack</text>
+  <text x="1060" y="776" class="box-text">select_model_preset, set_seed_ensemble</text>
+
+  <rect x="632" y="350" width="280" height="120" rx="24" fill="#EDE9FE"/>
+  <text x="660" y="394" class="box-title">Tool Validation</text>
+  <text x="660" y="424" class="box-text">allowed names</text>
+  <text x="660" y="446" class="box-text">allowed arguments</text>
+
+  <rect x="632" y="520" width="280" height="120" rx="24" fill="#D1FAE5"/>
+  <text x="660" y="564" class="box-title">ExperimentSpec</text>
+  <text x="660" y="594" class="box-text">resolved feature pack</text>
+  <text x="660" y="616" class="box-text">model preset + ensemble size</text>
+
+  <rect x="352" y="500" width="220" height="140" rx="24" fill="#DBEAFE"/>
+  <text x="380" y="544" class="box-title">Executor</text>
+  <text x="380" y="574" class="box-text">features.py</text>
+  <text x="380" y="596" class="box-text">modeling.py</text>
+  <text x="380" y="618" class="box-text">metrics + submission</text>
+
+  <rect x="352" y="700" width="220" height="120" rx="24" fill="#FCE7F3"/>
+  <text x="380" y="744" class="box-title">BenchmarkResult</text>
+  <text x="380" y="774" class="box-text">holdout/public/private RMSE</text>
+
+  <rect x="72" y="500" width="220" height="140" rx="24" fill="#FDE2E2"/>
+  <text x="100" y="544" class="box-title">CriticAgent</text>
+  <text x="100" y="574" class="box-text">accept / retry / stop</text>
+  <text x="100" y="596" class="box-text">based on best-so-far score</text>
+
+  <rect x="72" y="700" width="220" height="120" rx="24" fill="#E0E7FF"/>
+  <text x="100" y="744" class="box-title">Tracking</text>
+  <text x="100" y="774" class="box-text">JSONL + optional W&amp;B</text>
+
+  <rect x="632" y="700" width="280" height="120" rx="24" fill="#DCFCE7"/>
+  <text x="660" y="744" class="box-title">Best Run</text>
+  <text x="660" y="774" class="box-text">submission.csv + run report</text>
+
+  <line x1="322" y1="225" x2="392" y2="225" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="642" y1="225" x2="712" y2="225" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="962" y1="225" x2="1032" y2="225" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1192" y1="280" x2="1192" y2="340" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1192" y1="450" x2="1192" y2="510" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1192" y1="620" x2="1192" y2="680" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1032" y1="735" x2="912" y2="735" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="772" y1="680" x2="772" y2="640" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="632" y1="580" x2="572" y2="580" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="462" y1="640" x2="462" y2="700" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="352" y1="760" x2="292" y2="760" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="182" y1="700" x2="182" y2="640" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="292" y1="570" x2="352" y2="570" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="572" y1="760" x2="632" y2="760" stroke="#3A4354" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M182 500C182 410 280 390 420 390H632" stroke="#2563EB" stroke-width="4" stroke-dasharray="12 10" marker-end="url(#arrow)"/>
+
+  <text x="250" y="470" class="label">retry loop</text>
+  <text x="448" y="664" class="small">deterministic executor</text>
+  <text x="1072" y="318" class="small">trusted code + untrusted retrieved text boundary</text>
+</svg>
