@@ -4,6 +4,10 @@ Tool-driven multi-agent system for `mws-ai-agents-2026`.
 
 This repository implements a reproducible Kaggle workflow where agents do not generate arbitrary Python code at runtime. Instead, they coordinate a predefined ML pipeline through typed tool plans, retrieval, validation, and feedback loops. The executor code is deterministic; agents choose which tools to call, in what order, and which experiment configuration to assemble from those tools.
 
+Best submissions (kaggle nickname in the leaderboard: sergak0):
+<img width="1026" height="420" alt="image" src="https://github.com/user-attachments/assets/5313bf8b-131d-4f8e-a133-62e2f15806aa" />
+
+
 ## What this project does
 
 - loads Kaggle competition files and profiles the dataset
